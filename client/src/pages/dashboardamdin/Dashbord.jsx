@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import { Sidemenu } from "../../components";
-import { Header } from "../../components";
+import { Sidemenu } from "../../components"; // Importez votre composant Sidemenu réel depuis le bon emplacement
+import {Header} from "../../components"; // Importez votre composant Header réel depuis le bon emplacement
+import {Contenu} from "../../components"; // Importez votre composant Contenu réel depuis le bon emplacement
 import "./dashbord.css";
 import HomeIcon from "@mui/icons-material/Home";
 import DataUsageIcon from "@mui/icons-material/DataUsage";
@@ -11,15 +12,16 @@ const Dashboard = () => {
     {
       titre: "Dashboard",
       icone: <HomeIcon />,
-      contenu: "Contenu du Dashboard",
+      contenu: < Contenu />
     },
-    { titre: "Mining", icone: <DataUsageIcon />, contenu: "Contenu de Mining" },
+    { titre: "Mining", icone: <DataUsageIcon />, contenu: < Contenu /> },
     {
       titre: "Vendeurs local",
       icone: <StoreIcon />,
       contenu: "Contenu des Vendeurs locaux",
     },
   ];
+
 
   const [ongletActif, setOngletActif] = useState(onglets[0]);
 
@@ -39,7 +41,7 @@ const Dashboard = () => {
           onOngletClick={handleOngletClick}
         />
       </div>
-      <div className="content">{ongletActif.contenu}</div>
+      <div className="content"> {ongletActif.contenu}  </div>
     </div>
   );
 };

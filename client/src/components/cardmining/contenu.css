@@ -1,0 +1,32 @@
+.contentcontainer {
+  width: 1250px;
+  height: 100%;
+  padding-left: 5%;
+}
+
+.flex-card {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 6%;
+}
+
+.contentcontainer h1 {
+  padding-top: 4%;
+  font-family: "Urbanist";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  color: #000000;
+}
+
+.table {
+  width: 1200px;
+}
+
+button {
+  margin-top: -5px;
+  margin: 10px;
+}

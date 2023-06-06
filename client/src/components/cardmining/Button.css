@@ -1,0 +1,22 @@
+.edit-color {
+    background: #def6e8;
+    color: #2CC971;
+  }
+  
+  .delete-color {
+    background: rgba(239, 37, 37, 0.1);
+    color: #db2121;
+  }
+  
+  .delete-color,
+  .edit-color {
+    width: 256px;
+    height: 36px;
+    font-family: "Urbanist";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    border-radius: 5px;
+  }
+  
