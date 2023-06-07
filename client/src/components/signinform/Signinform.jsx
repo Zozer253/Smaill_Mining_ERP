@@ -1,14 +1,10 @@
-import React, { useState, useEffect } from "react";
+// Signinform.js
+import React, { useState } from "react";
 import "./signinform.css";
 
-
-const Signinform = () => {
+const Signinform = ({ onLogin }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
-  useEffect(() => {
-    document.getElementById("email").focus();
-  }, []);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -18,7 +14,7 @@ const Signinform = () => {
       return;
     }
 
-    // TODO: Submit form
+    onLogin(); // Appel de la fonction onLogin pour gérer la connexion
   };
 
   return (
@@ -30,7 +26,7 @@ const Signinform = () => {
       </h3>
       <form action="" onSubmit={handleSubmit}>
         <div className="form-group">
-          <label for="email">Email</label>
+          <label htmlFor="email">Email</label>
           <input
             type="email"
             id="email"
@@ -42,7 +38,7 @@ const Signinform = () => {
           />
         </div>
         <div className="form-group">
-          <label for="password">Password</label>
+          <label htmlFor="password">Password</label>
           <input
             type="password"
             id="password"

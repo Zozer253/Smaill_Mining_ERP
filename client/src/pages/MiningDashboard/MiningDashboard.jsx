@@ -1,32 +1,35 @@
 import React, { useState } from "react";
 import { Sidemenu } from "../../components"; // Importez votre composant Sidemenu réel depuis le bon emplacement
-import {Header} from "../../components"; // Importez votre composant Header réel depuis le bon emplacement
-import {Contenu} from "../../components"; // Importez votre composant Contenu réel depuis le bon emplacement
-import "./dashbord.css";
+import { Header } from "../../components"; // Importez votre composant Header réel depuis le bon emplacement
+import { Contenu, Contenudmining } from "../../components"; // Importez votre composant Contenu réel depuis le bon emplacement
+import "../dashboardamdin/dashbord.css";
 import HomeIcon from "@mui/icons-material/Home";
 import DataUsageIcon from "@mui/icons-material/DataUsage";
 import StoreIcon from "@mui/icons-material/Store";
 
-const Dashboard = () => {
+const MiningDashboard = () => {
   const onglets = [
     {
       titre: "Dashboard",
       icone: <HomeIcon />,
-      contenu: < Contenu />
+      contenu: <Contenudmining />,
     },
-    { titre: "Mining", icone: <DataUsageIcon />, contenu: < Contenu /> },
     {
-      titre: "Vendeurs local",
+      titre: "Gestion de cotations",
+      icone: <DataUsageIcon />,
+      contenu: <Contenu />,
+    },
+    {
+      titre: "Gestion des offres",
       icone: <StoreIcon />,
       contenu: "Contenu des Vendeurs locaux",
     },
     {
-      titre: "Vérification",
+      titre: "Mes fournisseurs",
       icone: <StoreIcon />,
-      contenu: < Contenu />,
+      contenu: <Contenu />,
     },
   ];
-
 
   const [ongletActif, setOngletActif] = useState(onglets[0]);
 
@@ -46,9 +49,9 @@ const Dashboard = () => {
           onOngletClick={handleOngletClick}
         />
       </div>
-      <div className="content"> {ongletActif.contenu}  </div>
+      <div className="content"> {ongletActif.contenu} </div>
     </div>
   );
 };
 
-export default Dashboard;
+export default MiningDashboard;
